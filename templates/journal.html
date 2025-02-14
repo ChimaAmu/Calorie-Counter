@@ -1,0 +1,42 @@
+{% include "layout.html" %}
+{% block head %}
+{% endblock %}
+{% block content %}
+	<h1>{{ person }}'s Food Journal</h1>
+	<h3>You'll need to eat {{ kcal }} calories today!</h3>
+	<h4>BMR: {{ rate }}</h4>
+	
+	
+	<center><div class="list">
+		<ul>
+			<li>Breakfast</li>
+			<li>Lunch</li>
+			<li>Dinner</li>
+			<li>Snacks</li>
+		</ul>
+		<ul>
+			
+			<li data-label="Breakfast">
+			<input type="text" id="food_b" value="" placeholder="Eat a fibrous breakfast!"/>
+			<input type="button" value="&#10004;" id="add_b"/>
+			<ul id="list_b"></ul>
+
+			<li data-label="Lunch">
+			<input type="text" id="food_l" value="" placeholder="Get enough protein?"/>
+			<input type="button" value="&#10004;" id="add_l"/>
+			<ul id="list_l"></ul>
+
+			<li data-label="Breakfast">
+			<input type="text" id="food_d" value="" placeholder="Nothing too heavy!"/>
+			<input type="button" value="&#10004;" id="add_d"/>
+			<ul id="list_d"></ul>
+
+			<li data-label="Snacks">
+			<input type="text" id="food_s" value="" placeholder="Any snacks today?"/>
+			<input type="button" value="&#10004;" id="add_s"/>
+			<ul id="list_s"></ul>
+
+		</ul>
+		<br>
+	</div></center>
+{% endblock %}

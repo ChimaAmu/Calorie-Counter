@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		{% block head %}
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{% block title %}{% endblock %}  CaloCount</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+		</script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js">
+		</script>
+		<script defer src="{{ url_for('static', filename='script.js') }}"></script>
+		{% endblock %}
+	</head>
+	<body>
+		<div class="card">
+			<div id="header">{% block header %}<a href="{{ url_for('index') }}">Calculate BMR</a> | <a href="{{ url_for('journal') }}">Journal</a> | <a href="{{ url_for('info') }}">Info</a>{% endblock %}
+			<div id="content">{% block content %}{% endblock %}</div>
+		</div>
+	</body>
+</html>

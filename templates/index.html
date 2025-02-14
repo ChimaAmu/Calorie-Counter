@@ -1,0 +1,28 @@
+{% include "layout.html" %}
+{% block head %}
+{% endblock %}
+{% block content %}
+	<h1>CaloCount</h1>
+	<h2>Welcome to Calocount! Please enter your personal information below to get started on your new healthy lifestyle</h2>
+	<form action="{{ url_for("index")}}" method="post"> 
+		
+		<label for="name">Name:</label>
+		<input type="text" id="name" name="fname" placeholder="name"<br />
+
+		<label for="age">Age:</label>
+		<input type="text" id="age" name="fage" placeholder="age"><br/>
+
+		<label for="sexChoice1">Male</label>
+		<input type ="radio" id="sexChoice1" name="fsex" value="Male">
+		<label for="sexChoice2">Female</label>
+		<input type ="radio" id="sexChoice2" name="fsex" value="Female"><br />
+		
+		<label for="height">Height (in cm):</label>
+		<input type="text" id="height" name="fheight" placeholder="Height"><br />
+		
+		<label for="weight">Weight (in kg):</label>
+		<input type="text" id="weight" name="fweight" placeholder="Weight">
+		
+	<button type="submit">Enter</button>
+	</form>
+{% endblock %}
